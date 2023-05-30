@@ -1,4 +1,4 @@
-resource "aws_nat_gateway" "nat1s" {
+resource "aws_nat_gateway" "nat1" {
   connectivity_type = "public"
   subnet_id         = aws_subnet.subnet1.id
   allocation_id     = aws_eip.eip1.id
