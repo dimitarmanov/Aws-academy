@@ -4,7 +4,7 @@ resource "aws_subnet" "subnet1" {
   availability_zone = "eu-west-1a"
 
   tags = {
-    Name = "terraform-subnet-1"
+    Name = "terraform-subnet-1-public"
   }
 }
 
@@ -14,7 +14,7 @@ resource "aws_subnet" "subnet2" {
   availability_zone = "eu-west-1b"
 
   tags = {
-    Name = "terraform-subnet-2"
+    Name = "terraform-subnet-2-public"
   }
 }
 
@@ -24,7 +24,7 @@ resource "aws_subnet" "subnet3" {
   availability_zone = "eu-west-1a"
 
   tags = {
-    Name = "terraform-subnet-3"
+    Name = "terraform-subnet-3-private"
   }
 }
 
@@ -34,6 +34,6 @@ resource "aws_subnet" "subnet4" {
   availability_zone = "eu-west-1b"
 
   tags = {
-    Name = "terraform-subnet-4"
+    Name = "terraform-subnet-4-private"
   }
 }
