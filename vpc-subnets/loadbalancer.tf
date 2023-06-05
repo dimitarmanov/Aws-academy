@@ -5,7 +5,7 @@ resource "aws_lb" "alb" {
   security_groups    = [aws_security_group.alb_sg.id]
   subnets            = [aws_subnet.subnet1.id, aws_subnet.subnet2.id]
 
-  enable_deletion_protection = true
+  enable_deletion_protection = false
 }
 
 resource "aws_lb_target_group" "lb_tg" {

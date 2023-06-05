@@ -1,0 +1,21 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Principal": {
+                "AWS": "arn:aws:sts::557508635769:assumed-role/AWSReservedSSO_AWSAdministratorAccessLockedTags_e55aa3bc815228e8/ivan_mihaylov@flutterint.com"
+            },
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:ListBucket",
+                "s3:PutObject"
+                ],
+            "Resource": [
+                "${bucket_arn}/*",
+                "${bucket_arn}"
+                ]
+        }
+    ]
+}
