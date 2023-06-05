@@ -4,7 +4,7 @@
         {
             "Sid": "PublicReadGetObject",
             "Principal": {
-                "AWS": "arn:aws:sts::557508635769:assumed-role/AWSReservedSSO_AWSAdministratorAccessLockedTags_e55aa3bc815228e8/ivan_mihaylov@flutterint.com"
+                "AWS": "arn"
             },
             "Effect": "Allow",
             "Action": [
