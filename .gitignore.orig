@@ -33,4 +33,8 @@ override.tf.json
 .terraformrc
 terraform.rc
 .DS_Store
+<<<<<<< HEAD
+aws-devops-academy/
+=======
 idea/
+>>>>>>> 2a988d252c8db608a325a09414559989b809a1d1
