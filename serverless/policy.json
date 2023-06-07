@@ -1,0 +1,20 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "DenyAllExceptDescribeTerminate",
+            "Effect": "Allow",
+            "Resource": "*",
+            "Action": [
+                "ec2:DescribeInstances",
+                "ec2:TerminateInstances"
+            ]
+        },
+        {
+            "Sid": "AllowCloudWatch",
+            "Effect": "Allow",
+            "Action": "cloudwatch:*",
+            "Resource": "*"
+        }
+    ]
+}

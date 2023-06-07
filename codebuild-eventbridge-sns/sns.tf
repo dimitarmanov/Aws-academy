@@ -1,5 +1,5 @@
 resource "aws_sns_topic" "codebuild_notifications" {
-  name = "codebuild_notifications"
+  name = "codebuild-notifications"
 }
 
 resource "aws_sns_topic_subscription" "email_subscription" {
@@ -58,5 +58,5 @@ POLICY
 
 resource "aws_sns_topic_policy" "sns_topic_policy" {
   arn    = aws_sns_topic.codebuild_notifications.arn
-  policy = data.aws_iam_policy.sns_email_policy.json
+  policy = data.aws_iam_policy.sns_email_policy.policy
 }

@@ -9,17 +9,8 @@ resource "aws_cloudwatch_event_rule" "time_based_rule" {
   name                = "time-based-rule"
   description         = "Triggered by a time-based schedule"
   schedule_expression = "cron(0 20 * * ? *)"
+  role_arn            = aws_iam_role.codebuild_role.arn
 
-  # Event pattern for CodeBuild project starts
-  event_pattern = <<EOF
-{
-  "source": ["aws.codebuild"],
-  "detail-type": ["CodeBuild Build State Change"],
-  "detail": {
-    "build-status": ["nuke_lol"]
-  }
-}
-EOF
 }
 
 # Create a target to start the CodeBuild project
