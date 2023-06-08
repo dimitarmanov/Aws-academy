@@ -8,10 +8,14 @@ data "aws_ami" "latest_amazon_linux" {
   }
 }
 
-data "aws_subnets" "terraform_vpc_subnets" {
-  filter {
-    name   = "vpc-id"
-    values = [aws_vpc.main.id]
-  }
+## Query VPC and subnets
+data "aws_vpc" "main_vpc" {
+  id = aws_vpc.main.id
 }
 
+data "aws_subnets" "default_vpc_subnets" {
+  filter {
+    name   = "vpc-id"
+    values = [data.aws_vpc.main_vpc.id]
+  }
+}
